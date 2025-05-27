@@ -10,7 +10,7 @@ function InputGrp({ children, type, placeholder }) {
         type={type}
         name={children}
         placeholder={placeholder}
-        className="border-[var(--color-secondary)] text-[var(--color-tertiary)] border-2 p-3 rounded-xl w-[100%]"
+        className="border-[var(--color-secondary)] text-[var(--color-tertiary)] border-2 p-3 rounded-xl w-[100%] outline-[var(--color-tertiary)]"
       />
     </div>
   );

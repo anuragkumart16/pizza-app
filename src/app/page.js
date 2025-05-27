@@ -5,6 +5,7 @@ import SmallText from '@/components/atoms/SmallText'
 import Btn from '@/components/atoms/Btn'
 import LoginForm from '@/components/organisms/LoginForm'
 
+
 function page() {
   return (
    <>
