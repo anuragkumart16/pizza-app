@@ -3,6 +3,7 @@ import Navbar from '@/components/Navbar'
 import BigHeading from '@/components/atoms/BigHeading'
 import SmallText from '@/components/atoms/SmallText'
 import Btn from '@/components/atoms/Btn'
+import LoginForm from '@/components/organisms/LoginForm'
 
 function page() {
   return (
@@ -12,6 +13,7 @@ function page() {
       <BigHeading>Sign into your account</BigHeading>
       <SmallText styles={"mt-6"}>Continue with your Google account</SmallText>
       <Btn styles={"mt-8"}>Continue with Google</Btn>
+      <LoginForm/>
     </div>
    </>
   )
