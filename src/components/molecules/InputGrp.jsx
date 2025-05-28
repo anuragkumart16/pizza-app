@@ -2,7 +2,7 @@ import React from "react";
 
 function InputGrp({ children, type, placeholder }) {
   return (
-    <div className="flex flex-col w-[100%] items-center justify-center" >
+    <div className="flex flex-col w-[100%] items-center justify-center">
       <label htmlFor={children} className="text-base self-start">
         {children}
       </label>
