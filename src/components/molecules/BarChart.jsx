@@ -20,6 +20,7 @@ const data = [
 ];
 
 export default function BarGraph() {
+  const isClient = typeof window !== 'undefined';
   return (
     <div className="border rounded-2xl p-6 border-[var(--color-tertiary)] size-fit">
       <SmallText>Orders By Categories</SmallText>

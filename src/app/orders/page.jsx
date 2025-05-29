@@ -1,12 +1,18 @@
+'use client'
+
 import BigHeading from '@/components/atoms/BigHeading'
 import SeconadryBtn from '@/components/atoms/SecondaryBtn'
 import DropDown from '@/components/molecules/DropDown'
 import SearchBar from '@/components/molecules/SearchBar'
-import Navbar from '@/components/Navbar'
+import Navbar from '@/components/organisms/Navbar'
 import Table from '@/components/organisms/Table'
-import React from 'react'
+import { useAuth } from '@/hooks/useAuth'
+import { useRouter } from 'next/navigation'
+import React,{ useEffect } from 'react'
 
 function page() {
+  const router = useRouter();
+  const { isLoggedIn } = useAuth();
   // dummy data
   const headings = ["Order ID", "Customer", "Pizza type", "Quantity", "Order date", "Status"]
   const data = [
@@ -17,6 +23,14 @@ function page() {
     ["24680", "Bob Johnson", "Hawaiian", "3", "2023-05-03", "Delivered"],
     ["13579", "Alice Brown", "BBQ", "2", "2023-05-04", "Cancelled"],
   ]
+
+  // checking if user is logged in
+  useEffect(() => {
+    if (!isLoggedIn) {
+      router.push("/");
+    }
+  }, [router, isLoggedIn])
+
   return (
     <>
       <Navbar />
